@@ -1,0 +1,25 @@
+.nav {
+  &__list {
+    --column: 2;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(var(--column), 1fr);
+    gap: 20px 15px;
+
+    @include on-desktop {
+      grid-template-columns: 2fr 1fr;
+      column-gap: 40px;
+    }
+  }
+
+  &__link {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+  }
+}
